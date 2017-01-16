@@ -1,3 +1,120 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-layout fullscreen>
+
+  <md-sidenav #sidenav>
+    <md-nav-list>
+      <a md-list-item>
+        <md-icon md-list-icon>assignment_ind</md-icon>
+        <span md-line>
+         <a [routerLink]="['/authoring']" href="">Authoring</a>
+        </span>
+        <span md-line class="desc">Create your Questions and Answers</span>
+        
+      </a>
+      <a md-list-item>
+        <md-icon md-list-icon>pets</md-icon>
+        <span md-line>
+          <a [routerLink]="['/data-collection']" href="">Data Collection</a>
+        </span>
+        <span md-line class="desc">Data Collection</span>
+      </a>
+      <a md-list-item>
+        <md-icon md-list-icon>pets</md-icon>
+        <span md-line>
+           <a [routerLink]="['/insight']" href=""> INSIGHT DELIVERED</a>
+         </span>
+        <span md-line class="desc">To be Explained</span>
+      </a>
+      <a md-list-item>
+        <md-icon md-list-icon>pets</md-icon>
+        <span md-line>
+          <a [routerLink]="['/analysis']" href=""> ANALYSIS & INTEGRATION</a>
+          </span>
+        <span md-line class="desc">Looks like Reporting</span>
+      </a>
+      <a md-list-item>
+        <md-icon md-list-icon>pets</md-icon>
+        <span md-line>
+           <a [routerLink]="['/assets']" href=""> ASSETS</a>
+          </span>
+        <span md-line class="desc">To Be Explained</span>
+      </a>
+      <a md-list-item>
+        <md-icon md-list-icon>pets</md-icon>
+        <span md-line>
+           <a [routerLink]="['/pcdesign']" href=""> Design in PC</a>
+          </span>
+        <span md-line class="desc">Design In you PC</span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button md-icon-button (click)="sidenav.open()">
+      <md-icon>menu</md-icon>
+    </button>
+    S P S S
+  </md-toolbar>
+
+  <div class="container">
+     <router-outlet></router-outlet>
+    <!--<md-card *ngFor="let dog of dogs" [@fadeIn]="'in'">
+      <img md-card-image src="assets/{{dog.img}}" alt="{{dog.name}}的照片">
+      <md-card-title>
+        <span (click)="dog.editMode=true" *ngIf="!dog.editMode">{{dog.name}}</span>
+        <md-input [(ngModel)]="dog.name" *ngIf="dog.editMode" (blur)="dog.editMode=false">
+
+        </md-input>
+      </md-card-title>
+      <md-card-content class="desc">
+        我是{{dog.name}}。我喜欢去吃饭，跟我的朋友们去公园玩，和睡觉。给我打电话！
+      </md-card-content>
+      <md-card-actions align="end">
+        <button md-button color="primary">嗅</button>
+        <button md-button color="primary">汪</button>
+      </md-card-actions>
+    </md-card>-->
+
+  </div>
+
+
+</md-sidenav-layout>
+
+
+
+<!--<div [class.dark-theme]="isDarkTheme">
+  <md-toolbar color="primary">
+    <span>
+      <md-icon class="icon-20">pets</md-icon>
+      S P S S
+    </span>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+   <button md-menu-item (click)="openDialog()">Settings</button>
+    <button md-menu-item (click)="isDarkTheme=!isDarkTheme">Toggle theme</button>
+    <button md-menu-item>Help</button>
+  </md-menu>
+
+  <md-sidenav-layout>
+    <md-sidenav  #sidenav>
+      <md-tab-group>
+        <md-tab>
+          <template md-tab-label>Details</template>
+          <template md-tab-content>
+         
+            <button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
+          </template>
+        </md-tab>
+        <md-tab>
+          <template md-tab-label>Feed</template>
+          <template md-tab-content></template>
+        </md-tab>
+      </md-tab-group>
+    </md-sidenav>
+   
+  </md-sidenav-layout>
+
+
+</div>-->

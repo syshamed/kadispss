@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
+import {MdSidenav, MdDialog, MdDialogConfig, MdSlideToggle} from "@angular/material";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+   @ViewChild('sidenav') sidenav: MdSidenav;
+  isDarkTheme = false;
+
+  constructor(public dialog: MdDialog, public vcr: ViewContainerRef) {}
+
+  /*openDialog() {
+    const config = new MdDialogConfig();
+    config.viewContainerRef = this.vcr;
+    this.dialog.open(SettingsDialog, config);
+  }*/
 }

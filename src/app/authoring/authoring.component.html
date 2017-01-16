@@ -1,0 +1,55 @@
+<form novalidate [formGroup]='form'>
+  <md-card>
+    <md-card-title>Single Answer Question</md-card-title>
+    <md-card-content>
+      <div class="flex">
+        <p>Question</p>
+        <md-input placeholder="Input the Question" formControlName="question" required></md-input>
+      </div>
+      <div formArrayName="answers">
+        <p>Answers</p>
+        <div *ngFor="let answer of answers.controls; let i=index" [formGroupName]="i">
+          <md-input placeholder="Input the Answer" formControlName="answer" required></md-input>
+          <div>
+            <button md-button color="primary" (click)="add()">ADD ANOTHER ANSWER</button>
+          </div>
+        </div>
+      </div>
+    </md-card-content>
+    <md-card-actions align="end">
+      <button md-button color="primary" type="submit" (click)="submit()">SUBMIT</button>
+    </md-card-actions>
+  </md-card>
+</form>
+ <md-card>
+    <md-card-title>Show Questionaire</md-card-title>
+    <md-card-content>
+      <div class="flex">
+        <p>Question</p>
+          <!--  {{form.value | json}}-->
+           <p> {{ form.get('question').value | json }} </p> 
+      </div>
+        <p>Answers</p>
+              <div [formGroup]="form">
+                <div formArrayName="answers">
+                  <div *ngFor="let answer of form.controls.answers.control; let i=index">
+                    <span> Answer {{i + 1}}</span>
+                    <div [formGroupName]="i">
+                      <label >
+                                {{questionaire}}
+                                <input type="checkbox">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+       <!-- {{ form.get('answers').value | json }} -->
+    </md-card-content>
+
+  
+    
+  </md-card>
+
+ 
