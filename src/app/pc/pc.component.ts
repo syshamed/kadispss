@@ -8,9 +8,9 @@ import { MaterialModule } from '@angular/material';
 })
 export class PCComponent {
   tiles = [
-    {text: 'Questionnaire', cols: 1, rows: 1, color: 'lightblue'},
-    {text: 'Design', cols: 2, rows: 2, color: 'lightpink'},
-    {text: 'Properties', cols: 1, rows: 1, color: '#DDBDF1'},
-     {text: 'Short-Cuts', cols: 1, rows: 1, color: 'lightgreen'},
+    {text: 'Questionnaire', cols: 4, rows: 1, color: 'lightblue'},
+    {text: 'Design', cols: 8, rows: 2, color: 'lightpink'},
+    {text: 'Properties', cols: 4, rows: 2, color: '#DDBDF1'},
+     {text: 'Short-Cuts', cols: 4, rows: 1, color: 'lightgreen'},
   ];
 }

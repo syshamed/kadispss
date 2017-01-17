@@ -14,6 +14,8 @@ import { InsightComponent } from './insight/insight.component';
 import { AnalysisComponent } from './analysis/analysis.component';
 import { AssetsComponent } from './assets/assets.component';
 import { PCComponent } from './pc/pc.component';
+import { SingleAnswerQuestionComponent } from './single-answer-question/single-answer-question.component';
+import { MultipleAnswerQuestionComponent } from './multiple-answer-question/multiple-answer-question.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PCComponent } from './pc/pc.component';
     AnalysisComponent,
     AssetsComponent,
     routableComponents,
-    PCComponent
+    PCComponent,
+    SingleAnswerQuestionComponent,
+    MultipleAnswerQuestionComponent
   ],
   imports: [
     BrowserModule,

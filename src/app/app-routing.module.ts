@@ -7,15 +7,18 @@ import { DataCollectionComponent } from './data-collection/data-collection.compo
 import { InsightComponent } from './insight/insight.component';
 import { PCComponent } from './pc/pc.component';
 import { PageNotFoundComponent } from './page-not-found';
+import { SingleAnswerQuestionComponent } from './single-answer-question/single-answer-question.component';
+import { MultipleAnswerQuestionComponent } from './multiple-answer-question/multiple-answer-question.component';
+
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'AuthoringComponent', },
+  { path: '', pathMatch: 'full', redirectTo: 'authoring', },
   { path: 'authoring', component: AuthoringComponent },
-  { path: 'analysis', component: AnalysisComponent },
-  { path: 'assets', component: AssetsComponent },
-  { path: 'data-collection', component: DataCollectionComponent },
-  { path: 'insight', component: InsightComponent },
+  { path: 'SingleAnswerQuestion', component: SingleAnswerQuestionComponent },
+  { path: 'MultipleAnswerQuestion', component: MultipleAnswerQuestionComponent },
+  //{ path: 'data-collection', component: DataCollectionComponent },
+  //{ path: 'insight', component: InsightComponent },
   { path: 'pcdesign', component: PCComponent },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
@@ -33,5 +36,7 @@ export const routableComponents = [
   DataCollectionComponent,
   InsightComponent,
   PCComponent,
+  SingleAnswerQuestionComponent,
+  MultipleAnswerQuestionComponent,
   PageNotFoundComponent
 ];

@@ -1,15 +1,30 @@
 <p>
-  PC                   Design                    works                                                   !
-  --------------------------------------------------------------------------------------------------------
-  --------------------------------------------------------------------------------------------------------
+  PC Design works ! --------------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------- ------------------------------
 </p>
 
-<md-grid-list cols="4" rowHeight="400px">
-  <md-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="tile.cols"
-      [rowspan]="tile.rows"
-      [style.background]="tile.color">
-    {{tile.text}}
+<md-grid-list cols="16" rowHeight="400px" gutterSize="10px">
+  <md-grid-tile colspan="4" rowspan="1" [style.background]="'lightblue'">
+    <md-grid-tile-header>
+      <h3>Questionnaire</h3>
+    </md-grid-tile-header>
+  </md-grid-tile>
+
+  <md-grid-tile colspan="8" rowspan="2" [style.background]="'lightblue'">
+    <md-grid-tile-header>
+      <h3>Design</h3>
+    </md-grid-tile-header>
+  </md-grid-tile>
+
+  <md-grid-tile colspan="4" rowspan="2" [style.background]="'lightblue'">
+    <md-grid-tile-header>
+      <h3>Properties</h3>
+    </md-grid-tile-header>
+  </md-grid-tile>
+
+  <md-grid-tile colspan="4" rowspan="1" [style.background]="'lightblue'">
+    <md-grid-tile-header>
+      <h3>ShortCuts</h3>
+    </md-grid-tile-header>
   </md-grid-tile>
 </md-grid-list>
