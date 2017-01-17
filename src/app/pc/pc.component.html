@@ -9,8 +9,7 @@
       *ngFor="let tile of tiles"
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
-      [style.background]="tile.color"
-      md-grid-tile-header={{tile.text}} >
+      [style.background]="tile.color">
     {{tile.text}}
   </md-grid-tile>
 </md-grid-list>
